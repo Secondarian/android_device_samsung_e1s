@@ -51,7 +51,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/init/fstab.s5e9945:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/fstab.s5e9945 \
     $(LOCAL_PATH)/configs/init/init.recovery.s5e9945.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.s5e9945.rc \
     $(LOCAL_PATH)/configs/init/vendor/init.debug.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.debug.rc \
-    $(LOCAL_PATH)/configs/init/vendor/init.s5e9945.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.s5e9945.rc
+    $(LOCAL_PATH)/configs/init/vendor/init.s5e9945.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.s5e9945.rc \
+    $(LOCAL_PATH)/configs/init/vendor/init.s5e9945.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.s5e9945.usb.rc
 
 # Kernel Modules
 PRODUCT_COPY_FILES += /dev/null:$(TARGET_COPY_OUT_RECOVERY)/root/dev/null
@@ -69,7 +70,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml
 
-PRODUCT_PACKAGES += android.hardware.usb-service.samsung
+PRODUCT_PACKAGES += \
+    android.hardware.usb-service.samsung \
+    android.hardware.usb.gadget-service.samsung
 
 # VNDK
 PRODUCT_PACKAGES += vndservicemanager
