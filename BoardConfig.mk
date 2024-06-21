@@ -8,11 +8,9 @@ DEVICE_PATH := device/samsung/e1s
 
 # Architecture
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-a
+TARGET_ARCH_VARIANT := armv9-a
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 := 
-TARGET_CPU_VARIANT := generic
-TARGET_CPU_VARIANT_RUNTIME := cortex-a76
+TARGET_CPU_VARIANT := cortex-a76
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := s5e9945
