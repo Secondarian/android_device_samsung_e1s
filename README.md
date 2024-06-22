@@ -1,4 +1,4 @@
-# Android device tree for samsung SM-S921B (essi)
+# Android device tree for samsung SM-S921B (e1s)
 
 ```
 #
