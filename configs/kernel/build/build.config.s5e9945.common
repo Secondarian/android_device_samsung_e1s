@@ -1,4 +1,4 @@
-KERNEL_DIR="kernel"
+#KERNEL_DIR="kernel"
 . ${ROOT_DIR}/${KERNEL_DIR}/build.config.common
 . ${ROOT_DIR}/${KERNEL_DIR}/build.config.aarch64
 

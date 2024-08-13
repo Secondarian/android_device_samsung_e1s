@@ -68,7 +68,10 @@ TARGET_KERNEL_CONFIG := ../../../../../../$(DEVICE_PATH)/configs/kernel/$(TARGET
     $(TARGET_SOC)_user.config \
     $(TARGET_SOC)-user_defconfig
 TARGET_KERNEL_NO_GCC := true
-TARGET_KERNEL_ADDITIONAL_FLAGS := KCFLAGS="${KCFLAGS} -D__ANDROID_COMMON_KERNEL__" TARGET_SOC=$(TARGET_SOC)
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    $(shell ROOT_DIR=$(shell pwd) KERNEL_DIR=kernel/samsung/e1s \
+    bash -x device/samsung/e1s/configs/kernel/build/build.config.s5e9945_user \
+    2>/dev/stdout | sed -E 's/\++ //g' | grep -v /)
 BOARD_RAMDISK_USE_LZ4 := true
 
 # Modules
