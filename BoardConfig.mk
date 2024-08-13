@@ -60,13 +60,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_SEPARATED_DTBO := true
-TARGET_KERNEL_CONFIG := ../../../../../../$(DEVICE_PATH)/configs/kernel/$(TARGET_BOARD_PLATFORM)_u_gki_defconfig
-#TARGET_KERNEL_CONFIG := \
-    gki_defconfig \
-    $(TARGET_SOC)-base_defconfig \
-    $(TARGET_SOC)-bazel_defconfig \
-    $(TARGET_SOC)_user.config \
-    $(TARGET_SOC)-user_defconfig
+TARGET_KERNEL_CONFIG := $(TARGET_BOARD_PLATFORM)_u_gki_defconfig
 TARGET_KERNEL_NO_GCC := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     $(shell ROOT_DIR=$(shell pwd) KERNEL_DIR=kernel/samsung/e1s \

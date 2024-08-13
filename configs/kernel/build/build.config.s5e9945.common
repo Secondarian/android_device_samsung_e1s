@@ -9,7 +9,7 @@ TARGET_SOC=s5e9945
 DEFCONFIG=erd9945_u_gki_defconfig
 TARGET_BASE_CONFIG=${ROOT_DIR}/${KERNEL_DIR}/arch/arm64/configs/${TARGET_SOC}-base_defconfig
 FRAGMENT_CONFIG=${ROOT_DIR}/${KERNEL_DIR}/arch/arm64/configs/${TARGET_SOC}-bazel_defconfig
-POST_DEFCONFIG_CMDS="rm ${ROOT_DIR}/${KERNEL_DIR}/arch/arm64/configs/${DEFCONFIG}"
+#POST_DEFCONFIG_CMDS="rm ${ROOT_DIR}/${KERNEL_DIR}/arch/arm64/configs/${DEFCONFIG}"
 
 FILES="
 arch/arm64/boot/Image
