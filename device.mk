@@ -17,6 +17,9 @@
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 34
 
+# Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/samsung/e1s-kernel/kernel
 else
