@@ -17,7 +17,27 @@
 # API Levels
 PRODUCT_SHIPPING_API_LEVEL := 34
 
+# Fastbootd
+PRODUCT_PACKAGES += fastbootd
+
+# Fstab
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/fstab.s5e9945:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/fstab.s5e9945
+
+# GPU Firmware
+PRODUCT_COPY_FILES += \
+    vendor/samsung/e1s/proprietary/recovery/root/lib/firmware/sgpu/vangogh_lite_unified_evt1.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/firmware/sgpu/vangogh_lite_unified_evt1.bin
+
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health-service.example \
+    android.hardware.health-service.example_recovery
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Toolbox
+PRODUCT_PACKAGES += \
+    linker.vendor_ramdisk \
+    toolbox.vendor_ramdisk
 
 $(call inherit-product-if-exists, vendor/samsung/e1s/device-vendor.mk)
