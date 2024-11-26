@@ -34,13 +34,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/init/fstab.s5e9945:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/fstab.s5e9945 \
     $(LOCAL_PATH)/configs/init/init.recovery.s5e9945.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.s5e9945.rc
 
-# Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
-# Toolbox
+# Kernel Modules
+PRODUCT_COPY_FILES += /dev/null:$(TARGET_COPY_OUT_RECOVERY)/root/dev/null
 PRODUCT_PACKAGES += \
     linker.vendor_ramdisk \
     toolbox.vendor_ramdisk
+
+# Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Proprietary files
 $(call inherit-product, vendor/samsung/e1s/e1s-vendor.mk)
