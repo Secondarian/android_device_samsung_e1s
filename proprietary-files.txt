@@ -2,3 +2,7 @@
 
 # GPU firmware
 recovery/root/lib/firmware/sgpu/vangogh_lite_unified_evt1.bin
+
+# Init
+vendor/etc/init/init.s5e9945.rc
+vendor/etc/ueventd.rc
