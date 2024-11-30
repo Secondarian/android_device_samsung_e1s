@@ -374,10 +374,6 @@ on post-fs-data
 #mAFPC
     exec - system system -- /system/bin/mafpc_write
 
-on early-boot
-    # Update dm-verity state and set partition.*.verified properties
-    verity_update_state
-
 on boot
     write /proc/sys/vm/swappiness 100
 
