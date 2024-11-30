@@ -309,11 +309,8 @@ on post-fs-data
     chown system audio /sys/class/cirrus/cirrus_bd/over_temp_count_0
     chown system audio /sys/class/cirrus/cirrus_bd/over_temp_count_1
 
-# Samsung Pay
-    mkdir /efs/pfw_data 0760 vendor_spay vendor_spay
-
 # MST/NFC Switch
-    chown vendor_spay system /dev/mst_ctrl
+    chown system system /dev/mst_ctrl
     chmod 0660 /dev/mst_ctrl
 
 # IPSEC PIDDIR for VoWiFi
