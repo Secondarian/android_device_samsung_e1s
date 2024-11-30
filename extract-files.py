@@ -4,6 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+from extract_utils.fixups_blob import (
+    blob_fixup,
+    blob_fixups_user_type,
+)
 from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
@@ -12,10 +16,21 @@ from extract_utils.utils import (
     run_cmd,
 )
 
+namespace_imports = [
+    'device/samsung/e1s',
+]
+
+
+blob_fixups: blob_fixups_user_type = {
+    'vendor/lib64/libexynosgraphicbuffer.so': blob_fixup()
+        .add_needed('libshim_ui.so'),
+}  # fmt: skip
 
 module = ExtractUtilsModule(
     'e1s',
     'samsung',
+    blob_fixups=blob_fixups,
+    namespace_imports=namespace_imports,
 )
 
 if __name__ == '__main__':
