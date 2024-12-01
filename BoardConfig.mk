@@ -125,4 +125,5 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 0
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 0
 
 # VINTF
-DEVICE_MANIFEST_FILE := device/samsung/e1s/configs/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := device/samsung/e1s/configs/vintf/compatibility_matrix.device.xml
+DEVICE_MANIFEST_FILE := device/samsung/e1s/configs/vintf/manifest.xml
