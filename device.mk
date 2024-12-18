@@ -28,7 +28,7 @@ $(call inherit-product, vendor/samsung/e1s/e1s-vendor.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 
-# API Levels
+# API levels
 PRODUCT_SHIPPING_API_LEVEL := 34
 
 # Branding
@@ -43,6 +43,12 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += hardware/samsung
 
+
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio.service \
+    android.hardware.audio@7.1-impl \
+    android.hardware.audio.effect@7.0-impl
 
 # Fastbootd
 PRODUCT_PACKAGES += fastbootd
