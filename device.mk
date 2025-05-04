@@ -109,7 +109,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute.xml
 
 # DRM
-PRODUCT_PACKAGES += android.hardware.drm-service.clearkey
+PRODUCT_PACKAGES += com.android.hardware.drm.clearkey
 
 # Display
 PRODUCT_PACKAGES += hdr_samsung_mx.key
