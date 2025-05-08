@@ -329,6 +329,7 @@ vendor/lib64/libfloatingfeature.so
 vendor/lib64/libsecnativefeature.so
 
 # RIL
+system/etc/apns-conf.xml:system_ext/etc/apns-conf.xml
 vendor/bin/cbd
 vendor/bin/dmd
 vendor/bin/hw/rild
